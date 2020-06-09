@@ -1,0 +1,141 @@
+\doxysection{Creature Class Reference}
+\label{class_creature}\index{Creature@{Creature}}
+Inheritance diagram for Creature\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_creature}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_creature_acfc9fe67d24e5d477ed683a0ecd92673}} 
+enum \{ \newline
+{\bfseries right}, 
+{\bfseries left}, 
+{\bfseries jump}, 
+{\bfseries stay}, 
+\newline
+{\bfseries right\+\_\+\+Top}, 
+{\bfseries left\+\_\+\+Top}
+ \}
+\begin{DoxyCompactList}\small\item\em The set of possible states of an object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_creature_af79dbe25256066256f3cbc844e5af7a6}} 
+\textbf{ Creature} (sf\+::\+String Name, float X, float Y, int W, int H)
+\begin{DoxyCompactList}\small\item\em Constructors/\+Destructor of \doxyref{Creature}{p.}{class_creature}. \end{DoxyCompactList}\item 
+sf\+::\+Float\+Rect \textbf{ get\+Rect} ()
+\item 
+int \textbf{ get\+Damage} ()
+\item 
+virtual void \textbf{ update} (float time)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_creature_a00f9c62018182c4f57952607ad6208b9}} 
+enum Creature\+:: \{ ... \}  \textbf{ state}
+\begin{DoxyCompactList}\small\item\em The set of possible states of an object. \end{DoxyCompactList}\item 
+\mbox{\label{class_creature_aace9d2396b580e234d67e46469951639}} 
+float \textbf{ dx}
+\begin{DoxyCompactList}\small\item\em variables for moving an object \end{DoxyCompactList}\item 
+\mbox{\label{class_creature_a68fec0dfbefebdc9de7e28d0928cf409}} 
+float {\bfseries dy}
+\item 
+\mbox{\label{class_creature_ae0b50c9be44bd13ce2ab4bb8dde1db4d}} 
+float {\bfseries x}
+\item 
+\mbox{\label{class_creature_af13cee1008b7374be542f081c7d1fdd7}} 
+float {\bfseries y}
+\item 
+\mbox{\label{class_creature_ae04cb8335ca0f2b47a195fc93d007f5b}} 
+float {\bfseries speed}
+\item 
+\mbox{\label{class_creature_a33c02fc93d1ef7e5afb0b453d7753d4f}} 
+int \textbf{ w}
+\begin{DoxyCompactList}\small\item\em Weight and Height for Rectangle of our object. \end{DoxyCompactList}\item 
+\mbox{\label{class_creature_a936ee809734277ec9476a23b2e5b841a}} 
+int {\bfseries h}
+\item 
+\mbox{\label{class_creature_af34bb349267bd0d2937bf9620c815c71}} 
+int {\bfseries health}
+\item 
+\mbox{\label{class_creature_a8a55dd63e022a1fc04404896a378e5ba}} 
+bool \textbf{ life}
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+object health \end{quote}
+\end{DoxyCompactList}\item 
+\mbox{\label{class_creature_a8490a90455deba82278e34713d609666}} 
+bool {\bfseries is\+Move}
+\item 
+\mbox{\label{class_creature_a1579031949df55978047eb7e52be8423}} 
+bool \textbf{ on\+Ground}
+\begin{DoxyCompactList}\small\item\em $>$indicates whether the object is moving \end{DoxyCompactList}\item 
+sf\+::\+Image \textbf{ image}
+\begin{DoxyCompactList}\small\item\em sfml-\/objects to create visual character \end{DoxyCompactList}\item 
+\mbox{\label{class_creature_adf6c0a78291b34eb5579edeb3db07ac3}} 
+sf\+::\+Texture {\bfseries texture}
+\item 
+\mbox{\label{class_creature_a1d4a15ee7d451f437c089c44276b08d4}} 
+sf\+::\+Sprite {\bfseries sprite}
+\item 
+\mbox{\label{class_creature_a24eb9205d20b9e7bbc1c67e289f6c7a4}} 
+sf\+::\+String {\bfseries name}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_creature_af5ae41e6bd306591b7cf2ba0ee731790}} 
+\index{Creature@{Creature}!getDamage@{getDamage}}
+\index{getDamage@{getDamage}!Creature@{Creature}}
+\doxysubsubsection{getDamage()}
+{\footnotesize\ttfamily int Creature\+::get\+Damage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Method to get damage \begin{DoxyReturn}{Returns}
+Health after damage 
+\end{DoxyReturn}
+\mbox{\label{class_creature_aa3723f5c13724db478a636d0f1749ea4}} 
+\index{Creature@{Creature}!getRect@{getRect}}
+\index{getRect@{getRect}!Creature@{Creature}}
+\doxysubsubsection{getRect()}
+{\footnotesize\ttfamily sf\+::\+Float\+Rect Creature\+::get\+Rect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Method to get hitbox \begin{DoxyReturn}{Returns}
+Rectangle with parameters Position x, y, Height, Weight 
+\end{DoxyReturn}
+\mbox{\label{class_creature_a39cd5510675bf5430060d2be9d991cde}} 
+\index{Creature@{Creature}!update@{update}}
+\index{update@{update}!Creature@{Creature}}
+\doxysubsubsection{update()}
+{\footnotesize\ttfamily virtual void Creature\+::update (\begin{DoxyParamCaption}\item[{float}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+The method is responsible for the movement of the character 
+\begin{DoxyParams}{Parameters}
+{\em time} & needed not to depend on processor frequency \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \textbf{ Bullet} \doxyref{}{p.}{class_bullet_ab3725b9457373c1612f6eac78d1210da}, \textbf{ Player2} \doxyref{}{p.}{class_player2_ad4b27930624268d078bc3e097a1be008}, and \textbf{ Player1} \doxyref{}{p.}{class_player1_aaec7ce6eda5d049d6a9a8027af8cfefd}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\label{class_creature_a81d912fd9cc7f708fecf024ee4270677}} 
+\index{Creature@{Creature}!image@{image}}
+\index{image@{image}!Creature@{Creature}}
+\doxysubsubsection{image}
+{\footnotesize\ttfamily sf\+::\+Image Creature\+::image}
+
+
+
+sfml-\/objects to create visual character 
+
+$>$indicates whether the object is on the ground 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ Creature.\+h}\item 
+Creature.\+cpp\end{DoxyCompactItemize}

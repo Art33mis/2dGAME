@@ -1,0 +1,76 @@
+\doxysection{Player2 Class Reference}
+\label{class_player2}\index{Player2@{Player2}}
+Inheritance diagram for Player2\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_player2}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_player2_abbd3833c75949334d21282e84c820250}} 
+\textbf{ Player2} (sf\+::\+String F, float X, float Y, float W, float H)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \textbf{ update} (float time)
+\item 
+void \textbf{ motion} (float time)
+\item 
+void \textbf{ interaction\+With\+Map} (float Dx, float Dy)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_player2_a24bd964eff2b347fea4d7679e46278e6}} 
+float \textbf{ Current\+Frame}
+\begin{DoxyCompactList}\small\item\em variable to determine which picture to draw \end{DoxyCompactList}\item 
+\mbox{\label{class_player2_a08bc117be12987eee6787556ffac58a6}} 
+sf\+::\+String \textbf{ Tile\+Map} [H\+E\+I\+G\+H\+T\+\_\+\+M\+AP]
+\begin{DoxyCompactList}\small\item\em Map\textquotesingle{}s array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_player2_af4dbd7c77df45f7cded5072e9f538710}} 
+\index{Player2@{Player2}!interactionWithMap@{interactionWithMap}}
+\index{interactionWithMap@{interactionWithMap}!Player2@{Player2}}
+\doxysubsubsection{interactionWithMap()}
+{\footnotesize\ttfamily void Player2\+::interaction\+With\+Map (\begin{DoxyParamCaption}\item[{float}]{Dx,  }\item[{float}]{Dy }\end{DoxyParamCaption})}
+
+The method is responsible to handle collisions with map 
+\begin{DoxyParams}{Parameters}
+{\em Dx,Dy} & acceleration on x and y \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_player2_a8996544beb8975958a51a84fb48e5176}} 
+\index{Player2@{Player2}!motion@{motion}}
+\index{motion@{motion}!Player2@{Player2}}
+\doxysubsubsection{motion()}
+{\footnotesize\ttfamily void Player2\+::motion (\begin{DoxyParamCaption}\item[{float}]{time }\end{DoxyParamCaption})}
+
+The method is responsible for animation and control 
+\begin{DoxyParams}{Parameters}
+{\em time} & needed to determine which picture to draw \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_player2_ad4b27930624268d078bc3e097a1be008}} 
+\index{Player2@{Player2}!update@{update}}
+\index{update@{update}!Player2@{Player2}}
+\doxysubsubsection{update()}
+{\footnotesize\ttfamily void Player2\+::update (\begin{DoxyParamCaption}\item[{float}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+The method is responsible for the movement of the character 
+\begin{DoxyParams}{Parameters}
+{\em time} & needed not to depend on processor frequency \\
+\hline
+\end{DoxyParams}
+
+
+Implements \textbf{ Creature} \doxyref{}{p.}{class_creature_a39cd5510675bf5430060d2be9d991cde}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ Player2.\+h}\item 
+Player2.\+cpp\end{DoxyCompactItemize}

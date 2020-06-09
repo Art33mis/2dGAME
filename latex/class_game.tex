@@ -1,0 +1,144 @@
+\doxysection{Game Class Reference}
+\label{class_game}\index{Game@{Game}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_game_ad59df6562a58a614fda24622d3715b65}} 
+\textbf{ Game} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \textbf{ poll\+Events} (float x1, float y1, int state1, float x2, float y2, int state2)
+\item 
+void \textbf{ update} (float time)
+\item 
+const bool \textbf{ running} () const
+\item 
+void \textbf{ start\+Game} ()
+\item 
+void \textbf{ create\+Map} ()
+\item 
+void \textbf{ draw\+Persons} ()
+\item 
+void \textbf{ intersection} (\textbf{ Player1} \&player1, \textbf{ Player2} \&player2)
+\item 
+void \textbf{ End\+\_\+\+Menu} (\textbf{ Player1} \&player1, \textbf{ Player2} \&player2)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{class_game_a745b3192c8b797b760cd70a9e730a393}} 
+sf\+::\+Sound\+Buffer \textbf{ shoot\+Buffer}
+\begin{DoxyCompactList}\small\item\em sfml-\/objects to add sound and music \end{DoxyCompactList}\item 
+\mbox{\label{class_game_ad53bf5b7ba5604afd4089784773882bc}} 
+sf\+::\+Sound {\bfseries shoot}
+\item 
+\mbox{\label{class_game_a01f031862741d01bf1a7649d4a0627a1}} 
+sf\+::\+Music {\bfseries music}
+\item 
+\mbox{\label{class_game_a3a2074b697c9130e93a116d92f149b68}} 
+std\+::unique\+\_\+ptr$<$ sf\+::\+Render\+Window $>$ \textbf{ window}
+\begin{DoxyCompactList}\small\item\em smart pointer of window \end{DoxyCompactList}\item 
+\mbox{\label{class_game_ad53a35b49c95240ea5bddf27d4a8bc6e}} 
+std\+::list$<$ std\+::unique\+\_\+ptr$<$ \textbf{ Creature} $>$ $>$ {\bfseries creatures}
+\item 
+\mbox{\label{class_game_aa2f59c5604c54063d2a55fa5362d82ac}} 
+std\+::list$<$ std\+::unique\+\_\+ptr$<$ \textbf{ Creature} $>$ $>$\+::iterator \textbf{ it}
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+list for bullets \end{quote}
+\end{DoxyCompactList}\item 
+sf\+::\+String \textbf{ Tile\+Map} [H\+E\+I\+G\+H\+T\+\_\+\+M\+AP]
+\begin{DoxyCompactList}\small\item\em Map\textquotesingle{}s array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_game_a11fa4f3895a81cd8db672ff526356618}} 
+\index{Game@{Game}!createMap@{createMap}}
+\index{createMap@{createMap}!Game@{Game}}
+\doxysubsubsection{createMap()}
+{\footnotesize\ttfamily void Game\+::create\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+create, draw and display Map \mbox{\label{class_game_a3aac811ea0a1a675cd457c4019f435ce}} 
+\index{Game@{Game}!drawPersons@{drawPersons}}
+\index{drawPersons@{drawPersons}!Game@{Game}}
+\doxysubsubsection{drawPersons()}
+{\footnotesize\ttfamily void Game\+::draw\+Persons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+draw all list items \mbox{\label{class_game_a53ece4091e428e24c52fa52ed91a88fa}} 
+\index{Game@{Game}!End\_Menu@{End\_Menu}}
+\index{End\_Menu@{End\_Menu}!Game@{Game}}
+\doxysubsubsection{End\_Menu()}
+{\footnotesize\ttfamily void Game\+::\+End\+\_\+\+Menu (\begin{DoxyParamCaption}\item[{\textbf{ Player1} \&}]{player1,  }\item[{\textbf{ Player2} \&}]{player2 }\end{DoxyParamCaption})}
+
+create, draw and display end of the game. 
+\begin{DoxyParams}{Parameters}
+{\em references} & player1, player2 needed to call their personal field health \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_game_a626626e7a9f4e017d5605d913a319297}} 
+\index{Game@{Game}!intersection@{intersection}}
+\index{intersection@{intersection}!Game@{Game}}
+\doxysubsubsection{intersection()}
+{\footnotesize\ttfamily void Game\+::intersection (\begin{DoxyParamCaption}\item[{\textbf{ Player1} \&}]{player1,  }\item[{\textbf{ Player2} \&}]{player2 }\end{DoxyParamCaption})}
+
+Check player and bullet collision, after delete bullet and get damage to player 
+\begin{DoxyParams}{Parameters}
+{\em references} & player1, player2 needed to call their personal method get\+Rect \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_game_a9672af81d07bb23c8e77d16237c2cc35}} 
+\index{Game@{Game}!pollEvents@{pollEvents}}
+\index{pollEvents@{pollEvents}!Game@{Game}}
+\doxysubsubsection{pollEvents()}
+{\footnotesize\ttfamily void Game\+::poll\+Events (\begin{DoxyParamCaption}\item[{float}]{x1,  }\item[{float}]{y1,  }\item[{int}]{state1,  }\item[{float}]{x2,  }\item[{float}]{y2,  }\item[{int}]{state2 }\end{DoxyParamCaption})}
+
+The method is responsible for handle events. Particularly close window, create and add bullet in list 
+\begin{DoxyParams}{Parameters}
+{\em x1,y1,x2,y2} & needed to set positions for new bullet \\
+\hline
+{\em state1,state2} & needed to choose direction of bullet \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_game_a3c75e92470139f175402030782794d34}} 
+\index{Game@{Game}!running@{running}}
+\index{running@{running}!Game@{Game}}
+\doxysubsubsection{running()}
+{\footnotesize\ttfamily const bool Game\+::running (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+open window \begin{DoxyReturn}{Returns}
+opening window 
+\end{DoxyReturn}
+\mbox{\label{class_game_ae8638ccdb0ef3bf39a6affa30aa1258f}} 
+\index{Game@{Game}!startGame@{startGame}}
+\index{startGame@{startGame}!Game@{Game}}
+\doxysubsubsection{startGame()}
+{\footnotesize\ttfamily void Game\+::start\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+calls all methods to start game \mbox{\label{class_game_a630b0c0837520829415c3bd1ae9b85b0}} 
+\index{Game@{Game}!update@{update}}
+\index{update@{update}!Game@{Game}}
+\doxysubsubsection{update()}
+{\footnotesize\ttfamily void Game\+::update (\begin{DoxyParamCaption}\item[{float}]{time }\end{DoxyParamCaption})}
+
+calls the method update for all list items 
+\begin{DoxyParams}{Parameters}
+{\em time} & needed for creatures\textquotesingle{} method update \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\label{class_game_a82dc5677604125a4bf6ce7176cee0520}} 
+\index{Game@{Game}!TileMap@{TileMap}}
+\index{TileMap@{TileMap}!Game@{Game}}
+\doxysubsubsection{TileMap}
+{\footnotesize\ttfamily sf\+::\+String Game\+::\+Tile\+Map[H\+E\+I\+G\+H\+T\+\_\+\+M\+AP]}
+
+
+
+Map\textquotesingle{}s array. 
+
+$>$iterator for list 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ Game.\+h}\item 
+Game.\+cpp\end{DoxyCompactItemize}
