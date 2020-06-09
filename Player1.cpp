@@ -1,6 +1,6 @@
 #include "Player1.h"
 
-Player1::Player1(sf::String F, float X, float Y, float W, float H) : Creature(F, X, Y, W,
+Player1::Player1(sf::String F, float X, float Y, float W, float H) : Player(F, X, Y, W,
                                                                               H)
 {
 
@@ -10,36 +10,7 @@ Player1::~Player1() {
 
 }
 
-void Player1::update( float time) {
-    motion(time);
 
-    switch (state)
-    {
-        case right:
-            dx = speed;
-            break;
-        case left:
-            dx = -speed;
-            break;
-        case jump:
-            break;
-        case stay:
-            break;
-        case right_Top:
-            dx = speed;
-            break;
-        case left_Top:
-            dx = -speed;
-            break;
-    }
-    x += dx * time;
-    interactionWithMap(dx, 0);
-    y += dy * time;
-    interactionWithMap(0, dy);
-    if (!isMove) speed = 0;
-    sprite.setPosition(x + w / 2, y + h / 2);
-    dy = dy + 0.0015 * time;
-}
 
 void Player1::motion(float time) {
 
@@ -82,24 +53,4 @@ void Player1::motion(float time) {
 }
 
 
-void Player1::interactionWithMap(float Dx, float Dy)
-{
 
-    for (int i = y / 32; i < (y + h) / 32; i++)
-        for (int j = x / 32; j < (x + w) / 32; j++) {
-            if (TileMap[i][j] == '0' | TileMap[i][j] == 's')
-            {
-                if (Dy > 0) {
-                    y = i * 32 - h;
-                    dy = 0;
-                    onGround = true;
-                }
-                if (Dy < 0) {
-                    y = i * 32 + 32;
-                    dy = 0;
-                }
-                if (Dx > 0) { x = j * 32 - w; }
-                if (Dx < 0) { x = j * 32 + 32; }
-            } else { onGround = false; }
-        }
-}
