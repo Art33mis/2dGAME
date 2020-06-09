@@ -22,7 +22,7 @@ public:
  *The method is responsible for the movement of the character
  * @param time needed not to depend on processor frequency
  */
-    void update(float time);
+
     /*!
      * The method is responsible for animation and control
      * @param time needed to determine which picture to draw
@@ -32,7 +32,6 @@ public:
      *The method is responsible to handle collisions with map
      * @param Dx, Dy acceleration on x and y
      */
-    void interactionWithMap(float Dx, float Dy);
 
 
     /// Map's array

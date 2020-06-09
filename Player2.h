@@ -8,8 +8,8 @@
 #define BASICSMETHODS_PLAYER2_H
 #include "Creature.h"
 #include "Map.h"
-
-class Player2 : public Creature {
+#include "Player.h"
+class Player2 : public Player {
 public:
     ///variable to determine which picture to draw
     float CurrentFrame;
@@ -21,7 +21,7 @@ public:
      *The method is responsible for the movement of the character
      * @param time needed not to depend on processor frequency
      */
-    void update(float time);
+
     /*!
      * The method is responsible for animation and control
      * @param time needed to determine which picture to draw
@@ -31,7 +31,7 @@ public:
      *The method is responsible to handle collisions with map
      * @param Dx, Dy acceleration on x and y
      */
-    void interactionWithMap(float Dx, float Dy);
+
 
 
     /// Map's array
