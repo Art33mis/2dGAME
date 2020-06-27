@@ -11,14 +11,14 @@
 inline void menu(std::unique_ptr<sf::RenderWindow> &window) {
  /// Creating music
     sf::Music music;//создаем объект музыки
-    music.openFromFile("sounds/West.ogg");//загружаем файл
+    music.openFromFile("/Users/artyom_avtaykin/Documents/GitHub/2dGAME/sounds/West.ogg");//загружаем файл
     music.play();
 /// creating a visual component menu
     //Create images
     sf::Image Background, Start, Exit;
-    Background.loadFromFile("images/Background.png");
-    Start.loadFromFile("images/Start1.png");
-    Exit.loadFromFile("images/Exit1.png");
+    Background.loadFromFile("/Users/artyom_avtaykin/Documents/GitHub/2dGAME/images/Background.png");
+    Start.loadFromFile("/Users/artyom_avtaykin/Documents/GitHub/2dGAME/images/Start1.png");
+    Exit.loadFromFile("/Users/artyom_avtaykin/Documents/GitHub/2dGAME/images/Exit1.png");
 
     ///create masks to delete background
     Start.createMaskFromColor(sf::Color(0, 0, 0));

@@ -11,9 +11,9 @@ Game::Game() {
 
     this->initWindow();
     shootBuffer.loadFromFile(
-            "sounds/shoot.ogg");
+            "/Users/artyom_avtaykin/Documents/GitHub/2dGAME/sounds/shoot.ogg");
     shoot.setBuffer(shootBuffer);
-    music.openFromFile("sounds/Queen.ogg");
+    music.openFromFile("/Users/artyom_avtaykin/Documents/GitHub/2dGAME/sounds/Queen.ogg");
 
 }
 
@@ -88,7 +88,7 @@ void Game::createMap() {
 
     sf::Image map_image;
     map_image.loadFromFile(
-            "images/map.png");
+            "/Users/artyom_avtaykin/Documents/GitHub/2dGAME/images/map.png");
     sf::Texture map;
     map.loadFromImage(map_image);
     sf::Sprite s_map;
@@ -169,9 +169,9 @@ void Game::End_Menu(Player1 &player1, Player2 &player2) {
     music.play();
 
     sf::Image Return, W1, W2;
-    Return.loadFromFile("images/Return.png");
-    W1.loadFromFile("images/W1.png");
-    W2.loadFromFile("images/W2.png");
+    Return.loadFromFile("/Users/artyom_avtaykin/Documents/GitHub/2dGAME/images/Return.png");
+    W1.loadFromFile("/Users/artyom_avtaykin/Documents/GitHub/2dGAME/images/W1.png");
+    W2.loadFromFile("/Users/artyom_avtaykin/Documents/GitHub/2dGAME/images/W2.png");
 
     Return.createMaskFromColor(sf::Color(0, 0, 0));
 

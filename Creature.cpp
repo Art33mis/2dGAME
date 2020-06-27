@@ -14,7 +14,7 @@ Creature::Creature(sf::String F, float X, float Y, int W, int H) {
     life = true;
     onGround = false;
     isMove = false;
-    image.loadFromFile("images/" + name);
+    image.loadFromFile("/Users/artyom_avtaykin/Documents/GitHub/2dGAME/images/" + name);
     texture.loadFromImage(image);
     sprite.setTexture(texture);
     sprite.setOrigin(w / 2, h / 2);
